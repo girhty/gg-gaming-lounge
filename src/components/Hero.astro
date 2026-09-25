@@ -1,0 +1,26 @@
+---
+const { profilePic } = Astro.props;
+---
+<section class="relative flex min-h-[780px] items-center overflow-hidden border-b border-white/10">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(139,92,246,.28),transparent_30%),radial-gradient(circle_at_20%_80%,rgba(34,211,238,.12),transparent_25%)]"></div>
+  <div class="absolute right-[-15%] top-[15%] h-[500px] w-[500px] rounded-full border border-electric/20 shadow-[0_0_160px_rgba(168,255,53,.12)]"></div>
+  <div class="relative z-10 mx-auto w-full max-w-7xl px-5 pt-28 lg:px-8">
+    <div class="max-w-4xl">
+      <div class="reveal mb-8 flex items-center gap-3">
+        <img src={profilePic} alt="GG logo" class="h-14 w-14 rounded-2xl border-2 border-electric object-cover shadow-glow" />
+        <div><p class="font-semibold">@gg_basra</p><p class="text-sm text-slate-400">Gaming center · Basra</p></div>
+        <span class="ml-2 rounded-full border border-electric/30 bg-electric/10 px-3 py-1 text-xs font-bold text-electric">● OPEN NOW</span>
+      </div>
+      <p class="reveal text-sm font-bold uppercase tracking-[.35em] text-electric" style="transition-delay:.1s">Play. Compete. Belong.</p>
+      <h1 class="reveal mt-5 font-display text-6xl font-bold leading-[.95] tracking-[-.06em] sm:text-8xl lg:text-[9.5rem]" style="transition-delay:.18s">GOOD<br /><span class="gradient-text">GAME.</span></h1>
+      <p class="reveal mt-8 max-w-xl text-lg leading-8 text-slate-300" style="transition-delay:.28s">The home of gaming, esports and unforgettable nights in Basra. Bring your squad. Write your story.</p>
+      <div class="reveal mt-9 flex flex-wrap gap-4" style="transition-delay:.36s">
+        <a href="#visit" class="rounded-full bg-electric px-7 py-4 font-bold text-ink transition hover:scale-105 hover:shadow-glow">Visit GG <span class="ml-2">↗</span></a>
+        <a href="#feed" class="rounded-full border border-white/20 px-7 py-4 font-bold transition hover:border-white hover:bg-white/10">See the action</a>
+      </div>
+    </div>
+    <div class="reveal mt-20 flex items-center gap-8 text-sm text-slate-400" style="transition-delay:.44s">
+      <span><b class="text-white">PS</b> PlayStation</span><span><b class="text-white">PC</b> Gaming</span><span><b class="text-white">GG</b> Esports</span>
+    </div>
+  </div>
+</section>

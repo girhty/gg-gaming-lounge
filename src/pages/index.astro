@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Gallery from '../components/Gallery.astro';
+import Location from '../components/Location.astro';
+
+const profilePic = 'https://scontent-ams2-1.cdninstagram.com/v/t51.82787-19/801220093_18618414220026593_8290179572510053897_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=100&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDI0LkMzIn0%3D';
+const posts = [
+  {
+    image: 'https://scontent-ams2-1.cdninstagram.com/v/t51.71878-15/615921406_1908827083054414_7928971977512247609_n.jpg?stp=dst-jpg_e35_s640x640_tt6',
+    caption: 'خلي نشوف ردة فعلكم على الكلاسيكوو داخل التعليقات 🔥',
+    likes: '1.2K'
+  },
+  {
+    image: 'https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/610662537_18546030949026593_3236300969360417102_n.jpg?stp=dst-jpg_e35_s640x640_tt6',
+    caption: 'جيجي من داخل جدة، تغطية مباراة السوبر وأجواء الديربي',
+    likes: '896'
+  },
+  {
+    image: 'https://scontent-ams2-1.cdninstagram.com/v/t51.71878-15/612063856_2402134006890840_5892263191481483938_n.jpg?stp=dst-jpg_e35_s640x640_tt6',
+    caption: 'ها شباب انفع ؟! 🎮',
+    likes: '742'
+  },
+  {
+    image: 'https://scontent-ams2-1.cdninstagram.com/v/t51.71878-15/587305504_734776693003289_6783813493543402136_n.jpg?stp=dst-jpg_e35_s640x640_tt6',
+    caption: 'محمد ميثم يحقق المركز الثالث في بطولة قوية من نوعها 🇮🇶',
+    likes: '1.4K'
+  },
+  {
+    image: 'https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/589150434_18538632886026593_7474405946966698469_n.jpg?stp=dst-jpg_e35_s640x640_tt6',
+    caption: 'الإعلان الرسمي لفريق GG في لعبة EA FC ✨',
+    likes: '1.1K'
+  },
+  {
+    image: 'https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/551062537_18523564750026593_4299462563077385880_n.jpg?stp=dst-jpg_e35_s640x640_tt6',
+    caption: 'أجواء خيالية في نهائيات بطولة الثنائيات 🔥',
+    likes: '2.3K'
+  }
+];
+---
+<Layout title="GG Gaming lounge | Basra" image={profilePic}>
+  <div class="noise fixed inset-0 z-50"></div>
+
+  <header class="absolute z-20 w-full">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-6 lg:px-8" aria-label="Main navigation">
+      <a href="/" class="flex items-center gap-3" aria-label="GG Gaming lounge home">
+        <img src={profilePic} alt="GG Gaming lounge logo" class="h-11 w-11 rounded-xl border border-electric/50 object-cover shadow-glow" />
+        <span class="font-display text-lg font-bold tracking-tight">GG<span class="text-electric">.</span></span>
+      </a>
+      <div class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+        <a href="#experience" class="transition hover:text-electric">Experience</a>
+        <a href="#feed" class="transition hover:text-electric">Community</a>
+        <a href="#visit" class="transition hover:text-electric">Visit us</a>
+      </div>
+      <a href="#visit" class="rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold transition hover:border-electric hover:text-electric">Find us <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <Hero profilePic={profilePic} />
+    
+    <section id="experience" class="relative mx-auto max-w-7xl px-5 py-24 lg:px-8">
+      <div class="reveal mb-12 max-w-2xl">
+        <p class="mb-4 text-xs font-bold uppercase tracking-[.3em] text-electric">The GG experience</p>
+        <h2 class="font-display text-4xl font-bold tracking-tight sm:text-5xl">More than a game.<br /><span class="text-slate-500">A place to belong.</span></h2>
+      </div>
+      <div class="grid gap-4 md:grid-cols-3">
+        <article class="reveal glass rounded-3xl p-7 transition duration-500 hover:-translate-y-2 hover:border-electric/40 hover:shadow-glow">
+          <span class="mb-12 block text-4xl">🎮</span>
+          <h3 class="font-display text-2xl font-bold">PlayStation</h3>
+          <p class="mt-3 leading-7 text-slate-400">Competitive setups, smooth screens and the latest games ready for your squad.</p>
+        </article>
+        <article class="reveal rounded-3xl bg-gradient-to-br from-violet/30 to-panel p-7 transition duration-500 hover:-translate-y-2 hover:shadow-violet">
+          <span class="mb-12 block text-4xl">🖥️</span>
+          <h3 class="font-display text-2xl font-bold">PC Gaming</h3>
+          <p class="mt-3 leading-7 text-slate-300">Level up with performance rigs built for serious sessions and esports play.</p>
+        </article>
+        <article class="reveal glass rounded-3xl p-7 transition duration-500 hover:-translate-y-2 hover:border-cyan/40">
+          <span class="mb-12 block text-4xl">🥞</span>
+          <h3 class="font-display text-2xl font-bold">Sweets & drinks</h3>
+          <p class="mt-3 leading-7 text-slate-400">Keep your energy high with refreshing drinks and sweet treats between matches.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-5 py-10 lg:px-8">
+      <div class="reveal grid gap-4 rounded-[2rem] border border-white/10 bg-white/[.03] p-6 sm:grid-cols-3 sm:p-10">
+        <div class="flex items-center gap-4 border-white/10 sm:border-r">
+          <span class="text-3xl">★</span><div><strong class="block text-3xl font-bold">4.6</strong><span class="text-sm text-slate-400">Google rating · 4 reviews</span></div>
+        </div>
+        <div class="flex items-center gap-4 border-white/10 sm:border-r sm:pl-8">
+          <span class="text-3xl">◉</span><div><strong class="block text-3xl font-bold">12.9K</strong><span class="text-sm text-slate-400">Instagram gamers</span></div>
+        </div>
+        <div class="flex items-center gap-4 sm:pl-8">
+          <span class="text-3xl">●</span><div><strong class="block text-3xl font-bold text-electric">LIVE</strong><span class="text-sm text-slate-400">Open now in Basra</span></div>
+        </div>
+      </div>
+    </section>
+
+    <Gallery posts={posts} />
+
+    <section class="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+      <div class="reveal relative overflow-hidden rounded-[2rem] bg-electric p-8 text-ink sm:p-14">
+        <div class="absolute -right-10 -top-20 text-[14rem] font-black leading-none opacity-10">GG</div>
+        <p class="relative text-xs font-bold uppercase tracking-[.3em]">Built for the next level</p>
+        <h2 class="relative mt-4 max-w-2xl font-display text-4xl font-bold sm:text-6xl">Where legends are born.</h2>
+        <a href="https://www.instagram.com/gg_basra/" target="_blank" rel="noreferrer" class="relative mt-8 inline-flex rounded-full bg-ink px-6 py-3 font-semibold text-white transition hover:scale-105">Follow @gg_basra <span class="ml-2">↗</span></a>
+      </div>
+    </section>
+
+    <Location />
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-10 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <div class="flex items-center gap-3"><img src={profilePic} alt="" class="h-8 w-8 rounded-lg object-cover" /><span>© 2025 GG Gaming lounge</span></div>
+      <p>حيث تولد الأساطير <span class="text-electric">•</span> Basra, Iraq</p>
+      <a href="https://www.instagram.com/gg_basra/" target="_blank" rel="noreferrer" class="text-white transition hover:text-electric">@gg_basra ↗</a>
+    </div>
+  </footer>
+</Layout>
